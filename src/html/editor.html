@@ -23,7 +23,7 @@ $(function() {
   if (basePath.lastIndexOf('/') > 0) basePath = basePath.substr(0, basePath.lastIndexOf('/'));
   var plugins;
   // A basic plugin that expose the "viewModel" object as a global variable.
-  // plugins = [function(vm) {window.viewModel = vm;}];
+  plugins = [function(vm) {window.viewModel = vm;}];
   var ok = Mosaico.init({
     imgProcessorBackend: basePath+'/img/',
     emailProcessorBackend: basePath+'/dl/',
